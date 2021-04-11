@@ -1,0 +1,46 @@
+﻿@model MVC_School_Application.Models.ClassModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>ClassModel</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="id" />
+            <div class="form-group">
+                <label asp-for="cls" class="control-label"></label>
+                <input asp-for="cls" class="form-control" />
+                <span asp-validation-for="cls" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="section" class="control-label"></label>
+                <input asp-for="section" class="form-control" />
+                <span asp-validation-for="section" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="starttime" class="control-label"></label>
+                <input asp-for="starttime" class="form-control" />
+                <span asp-validation-for="starttime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="endtime" class="control-label"></label>
+                <input asp-for="endtime" class="form-control" />
+                <span asp-validation-for="endtime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
